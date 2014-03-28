@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Tictic
 {
-    public class Player
+    public abstract class Player
     {
-        int get_fieldtarget();
+        public abstract int get_fieldtarget();
     }
 }
