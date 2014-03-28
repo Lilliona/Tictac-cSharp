@@ -1,0 +1,4 @@
+C:\Users\Julia\Informatik\ZTT\cSharp Tictic\Tictic\Tictic\bin\Debug\Tictic.exe
+C:\Users\Julia\Informatik\ZTT\cSharp Tictic\Tictic\Tictic\bin\Debug\Tictic.pdb
+C:\Users\Julia\Informatik\ZTT\cSharp Tictic\Tictic\Tictic\obj\x86\Debug\Tictic.exe
+C:\Users\Julia\Informatik\ZTT\cSharp Tictic\Tictic\Tictic\obj\x86\Debug\Tictic.pdb
