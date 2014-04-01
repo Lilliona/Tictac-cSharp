@@ -5,7 +5,16 @@ using System.Text;
 
 namespace Tictic
 {
-    public class Computer
+    public class Computer: Player
     {
+
+        public override void ImComputer()
+        {
+            Console.WriteLine("Oh no, I don't have Brain! D:");
+        }
+        public override int get_fieldtarget()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
