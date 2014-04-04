@@ -86,9 +86,9 @@ namespace Tictic
 			}
 			Console.WriteLine();
 		}
-        public  give_information_about_field()
+        public char give_information_about_field(int fieldnumber)
         {
-            field.get_fieldcontent();
+            return field.get_fieldcontent(fieldnumber);
         }
 	}
 }
