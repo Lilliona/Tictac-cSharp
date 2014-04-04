@@ -14,7 +14,11 @@ namespace Tictic
         }
         public override int get_fieldtarget()
         {
-            throw new NotImplementedException();
+            int ask_for_fieldtarget;
+            Console.WriteLine("I am the ultimate Computer! Take this:");
+            ask_for_fieldtarget=Convert.ToInt32(Console.ReadLine());
+            return ask_for_fieldtarget;
+
         }
 
         public void ask_Controller_for_fieldsets()
