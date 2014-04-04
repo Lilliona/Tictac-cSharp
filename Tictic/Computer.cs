@@ -11,17 +11,16 @@ namespace Tictic
         private int choice_for_intelligence;
         public Computer()
         {
-            choice_for_intelligence = 3;
+            this.choice_for_intelligence = 3;
         }
-
         public Computer(int choice_for_intelligence)
         {
             this.choice_for_intelligence = choice_for_intelligence;
         }
 
-        public override int get_fieldtarget(char[] field)
+        public override int get_fieldtarget(Field field)
         {
-            int ask_for_fieldtarget;
+            int ask_for_fieldtarget=0;
             
             if (choice_for_intelligence == 1)
             {
@@ -33,7 +32,11 @@ namespace Tictic
             }
             else if (choice_for_intelligence == 3)
             {
-                ask_for_fieldtarget=high_level_AI();
+                ask_for_fieldtarget = high_level_AI();
+            }
+            else
+            {
+                Console.WriteLine("This value is no option!");
             }
 
             return ask_for_fieldtarget;
@@ -41,24 +44,33 @@ namespace Tictic
 
         private int high_level_AI() 
         {
-            int result_of_AI=3;
-
+            Random random;
+            random = new Random();
+            int help_for_random;
+            help_for_random = random.Next(1,10);
+            int result_of_AI = help_for_random;//help for random wird später übernommen von opponents_set, s. TicTac2
 
             return result_of_AI;
         }
 
         private int normal_level_AI()
         {
-            int result_of_AI=2;
-
+            Random random;
+            random = new Random();
+            int help_for_random;
+            help_for_random = random.Next(1, 10);
+            int result_of_AI = help_for_random;
 
             return result_of_AI;
         }
 
         private int low_level_AI()
         {
-            int result_of_AI=1;
-
+            Random random;
+            random = new Random();
+            int help_for_random;
+            help_for_random = random.Next(1, 10);
+            int result_of_AI = help_for_random;
 
             return result_of_AI;
         }

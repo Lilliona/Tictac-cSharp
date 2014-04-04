@@ -10,6 +10,7 @@ namespace Tictic
         
         static void Main(string[] args)
         {
+            
             Controller controller;
             controller = new Controller();
 

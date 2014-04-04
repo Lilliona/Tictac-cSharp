@@ -26,7 +26,9 @@ namespace Tictic
                 Console.WriteLine("From what type is Player 2?");
                 Console.WriteLine(" [1] Human");
                 Console.WriteLine(" [2] Computer");
+                Console.WriteLine();
                 input_for_Player2 = Convert.ToInt32(Console.ReadLine());
+
             } while (input_for_Player2 < 1 && input_for_Player2 > 2);
 
             if (input_for_Player1 == 1)
@@ -35,7 +37,14 @@ namespace Tictic
             }
             else if (input_for_Player1 == 2)
             {
-                player1 = new Computer();
+                int choose_difficulty;
+                Console.WriteLine(" What difficulty do you wish?");
+                Console.WriteLine("  [1] Easy");
+                Console.WriteLine("  [2] Normal");
+                Console.WriteLine("  [3] Hard");
+                choose_difficulty = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
+                player1 = new Computer(choose_difficulty);
             }
             else
             {
@@ -48,7 +57,14 @@ namespace Tictic
             }
             else if (input_for_Player2 == 2)
             {
-                player2 = new Computer();
+                int choose_difficulty;
+                Console.WriteLine(" What difficulty do you wish?");
+                Console.WriteLine("  [1] Easy");
+                Console.WriteLine("  [2] Normal");
+                Console.WriteLine("  [3] Hard");
+                choose_difficulty = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
+                player2 = new Computer(choose_difficulty);
             }
             else
             {
@@ -80,7 +96,7 @@ namespace Tictic
                 }
                 else
                 {
-                    fieldtarget_of_player = player2.get_fieldtarget();
+                    fieldtarget_of_player = player2.get_fieldtarget(field);
                     mark = 'O';
                 }
 
