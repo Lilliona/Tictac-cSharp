@@ -70,7 +70,7 @@ namespace Tictic
             do
             {
                 show_field();
-
+                
                 who_inserts = who_inserts % 2;
 
                 if (who_inserts == 1)
@@ -133,11 +133,9 @@ namespace Tictic
                 }
 
                 who_inserts++;
-                //i=check_if_won();
+                i=check_if_won();
 
             } while (i == -1);
-
-            show_field();
 
             if (i == 1)
             {
@@ -164,7 +162,7 @@ namespace Tictic
             show_field();
         }
 
-        public void show_field()
+        private void show_field()
         {
             Console.WriteLine();
             for (int iterationnumber = 0; iterationnumber < 9; iterationnumber += 3)
@@ -181,5 +179,40 @@ namespace Tictic
         {
             return field.get_fieldcontent(fieldnumber);
         }
+
+        private int check_if_won()
+        {
+	        if ((field.get_fieldcontent(0) == field.get_fieldcontent(1) && field.get_fieldcontent(1) == field.get_fieldcontent(2)) 
+
+		        || (field.get_fieldcontent(3) == field.get_fieldcontent(4) && field.get_fieldcontent(4) == field.get_fieldcontent(5)) 
+
+		        || (field.get_fieldcontent(6) == field.get_fieldcontent(7) && field.get_fieldcontent(7) == field.get_fieldcontent(8))
+
+		        || (field.get_fieldcontent(0) == field.get_fieldcontent(3) && field.get_fieldcontent(3) == field.get_fieldcontent(6))
+
+		        || (field.get_fieldcontent(1) == field.get_fieldcontent(4) && field.get_fieldcontent(4) == field.get_fieldcontent(7))
+
+		        || (field.get_fieldcontent(2) == field.get_fieldcontent(5) && field.get_fieldcontent(5) == field.get_fieldcontent(8))
+
+		        || (field.get_fieldcontent(0) == field.get_fieldcontent(4) && field.get_fieldcontent(4) == field.get_fieldcontent(8))
+
+		        || (field.get_fieldcontent(2) == field.get_fieldcontent(4) && field.get_fieldcontent(4) == field.get_fieldcontent(6)))
+	        {
+		        return 1;
+	        }
+	        else if ((field.get_fieldcontent(0) != '1') && (field.get_fieldcontent(1) != '2') && (field.get_fieldcontent(2) != '3') 
+
+		        && (field.get_fieldcontent(3) != '4') && (field.get_fieldcontent(4) != '5') && (field.get_fieldcontent(5) != '6') 
+
+                && (field.get_fieldcontent(6) != '7') && (field.get_fieldcontent(7) != '8') && (field.get_fieldcontent(8) != '9'))
+	        {
+                return 0;
+            }
+	        else
+	        {	
+		        return -1;
+	        }
+        }
+
     }
 }
