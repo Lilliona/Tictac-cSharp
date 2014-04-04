@@ -8,22 +8,59 @@ namespace Tictic
     public class Computer: Player
     {
 
-        public override void ImComputer()
+        private int choice_for_intelligence;
+        public Computer()
         {
-            Console.WriteLine("Oh no, I don't have Brain! D:");
+            choice_for_intelligence = 3;
         }
-        public override int get_fieldtarget()
+
+        public Computer(int choice_for_intelligence)
+        {
+            this.choice_for_intelligence = choice_for_intelligence;
+        }
+
+        public override int get_fieldtarget(char[] field)
         {
             int ask_for_fieldtarget;
-            Console.WriteLine("I am the ultimate Computer! Take this:");
-            ask_for_fieldtarget=Convert.ToInt32(Console.ReadLine());
-            return ask_for_fieldtarget;
+            
+            if (choice_for_intelligence == 1)
+            {
+                ask_for_fieldtarget=low_level_AI();
+            }
+            else if (choice_for_intelligence == 2)
+            {
+                ask_for_fieldtarget=normal_level_AI();
+            }
+            else if (choice_for_intelligence == 3)
+            {
+                ask_for_fieldtarget=high_level_AI();
+            }
 
+            return ask_for_fieldtarget;
         }
 
-        public void ask_Controller_for_fieldsets()
+        private int high_level_AI() 
         {
-            
+            int result_of_AI=3;
+
+
+            return result_of_AI;
+        }
+
+        private int normal_level_AI()
+        {
+            int result_of_AI=2;
+
+
+            return result_of_AI;
+        }
+
+        private int low_level_AI()
+        {
+            int result_of_AI=1;
+
+
+            return result_of_AI;
         }
     }
 }

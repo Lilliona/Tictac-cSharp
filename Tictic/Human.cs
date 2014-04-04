@@ -7,12 +7,7 @@ namespace Tictic
 {
     public class Human: Player
     {
-        public override void ImComputer()
-        {
-            Console.WriteLine("Oh yes, I have Brain :D!");
-        }
-
-        public override int get_fieldtarget()
+        public override int get_fieldtarget(char[] field)
         {
             int ask_for_fieldtarget;
 

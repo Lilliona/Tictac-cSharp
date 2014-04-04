@@ -75,7 +75,7 @@ namespace Tictic
 
                 if (who_inserts == 1)
                 {
-                    fieldtarget_of_player = player1.get_fieldtarget();
+                    fieldtarget_of_player = player1.get_fieldtarget(field);
                     mark = 'X';
                 }
                 else
@@ -175,9 +175,9 @@ namespace Tictic
             }
             Console.WriteLine();
         }
-        public char give_information_about_field(int fieldnumber)
+        public void give_information_about_field()
         {
-            return field.get_fieldcontent(fieldnumber);
+            field.get_fieldcontent(1);
         }
 
         private int check_if_won()
