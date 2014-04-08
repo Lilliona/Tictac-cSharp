@@ -78,7 +78,7 @@ namespace Tictic
 
         private void turn()
         {
-            char mark;//bekommt den Wert X oder O je nach Spieler
+            char mark1,mark2;//bekommt den Wert X oder O je nach Spieler
             int who_inserts = 1;//Wechsel zwischen Spielern durch %2
             int fieldtarget_of_player = 0;//überbringt das gewählte Feld vom aktuellen Spieler
             int i = -1; //sagt durch bestimmen von Gewinner/Draw ob das Spiel weiter geht
@@ -91,13 +91,19 @@ namespace Tictic
 
                 if (who_inserts == 1)
                 {
-                    fieldtarget_of_player = player1.get_fieldtarget(field);
-                    mark = 'X';
+                    mark1 = 'X';
+                    mark2 = 'O';
+                    fieldtarget_of_player = player1.get_fieldtarget(field,mark1,mark2);
+                    Console.WriteLine("Player 1");
+
                 }
                 else
                 {
-                    fieldtarget_of_player = player2.get_fieldtarget(field);
-                    mark = 'O';
+                    mark1 = 'O';
+                    mark2 = 'X';
+                    fieldtarget_of_player = player2.get_fieldtarget(field,mark1,mark2);
+                    Console.WriteLine("Player 2");
+
                 }
 
                 /*******************************
@@ -108,39 +114,39 @@ namespace Tictic
 
                 if (fieldtarget_of_player == 1 && field.get_fieldcontent(0) == '1')
                 {
-                    field.set_fieldcontent(0, mark);
+                    field.set_fieldcontent(0, mark1);
                 }
                 else if (fieldtarget_of_player == 2 && field.get_fieldcontent(1) == '2')
                 {
-                    field.set_fieldcontent(1, mark);
+                    field.set_fieldcontent(1, mark1);
                 }
                 else if (fieldtarget_of_player == 3 && field.get_fieldcontent(2) == '3')
                 {
-                    field.set_fieldcontent(2, mark);
+                    field.set_fieldcontent(2, mark1);
                 }
                 else if (fieldtarget_of_player == 4 && field.get_fieldcontent(3) == '4')
                 {
-                    field.set_fieldcontent(3, mark);
+                    field.set_fieldcontent(3, mark1);
                 }
                 else if (fieldtarget_of_player == 5 && field.get_fieldcontent(4) == '5')
                 {
-                    field.set_fieldcontent(4, mark);
+                    field.set_fieldcontent(4, mark1);
                 }
                 else if (fieldtarget_of_player == 6 && field.get_fieldcontent(5) == '6')
                 {
-                    field.set_fieldcontent(5, mark);
+                    field.set_fieldcontent(5, mark1);
                 }
                 else if (fieldtarget_of_player == 7 && field.get_fieldcontent(6) == '7')
                 {
-                    field.set_fieldcontent(6, mark);
+                    field.set_fieldcontent(6, mark1);
                 }
                 else if (fieldtarget_of_player == 8 && field.get_fieldcontent(7) == '8')
                 {
-                    field.set_fieldcontent(7, mark);
+                    field.set_fieldcontent(7, mark1);
                 }
                 else if (fieldtarget_of_player == 9 && field.get_fieldcontent(8) == '9')
                 {
-                    field.set_fieldcontent(8, mark);
+                    field.set_fieldcontent(8, mark1);
                 }
                 else
                 {

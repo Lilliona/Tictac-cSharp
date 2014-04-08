@@ -7,6 +7,6 @@ namespace Tictic
 {
     public abstract class Player
     {
-        public abstract int get_fieldtarget(Field field);
+        public abstract int get_fieldtarget(Field field,char mark1, char mark2);
     }
 }
