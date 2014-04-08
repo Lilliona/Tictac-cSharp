@@ -93,7 +93,7 @@ namespace Tictic
                 {
                     mark1 = 'X';
                     mark2 = 'O';
-                    fieldtarget_of_player = player1.get_fieldtarget(field,mark1,mark2);
+                    fieldtarget_of_player = player1.get_fieldtarget(field,mark2,mark1);
                     Console.WriteLine("Player 1");
 
                 }
@@ -101,7 +101,7 @@ namespace Tictic
                 {
                     mark1 = 'O';
                     mark2 = 'X';
-                    fieldtarget_of_player = player2.get_fieldtarget(field,mark1,mark2);
+                    fieldtarget_of_player = player2.get_fieldtarget(field,mark2,mark1);
                     Console.WriteLine("Player 2");
 
                 }
