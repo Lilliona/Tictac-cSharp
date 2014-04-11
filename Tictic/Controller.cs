@@ -8,28 +8,47 @@ namespace Tictic
         private Player player2;
         private Field field;
 
+        private int win_counter_player1;
+        private int win_counter_player2;
+        private int win_counter_draw;
+
         private void choose_Player()
         {
             int input_for_Player1;
             int input_for_Player2;
 
-            do
-            {
-                Console.WriteLine("From what type is Player 1?");
-                Console.WriteLine(" [1] Human");
-                Console.WriteLine(" [2] Computer");
-                input_for_Player1 = Convert.ToInt32(Console.ReadLine());
-            } while (input_for_Player1 < 1 && input_for_Player1 > 2);
+            Console.WriteLine("From what type is Player 1?");
+            Console.WriteLine(" [1] Human");
+            Console.WriteLine(" [2] Computer");
 
-            do
+            while (!Int32.TryParse(Console.ReadLine(), out input_for_Player1) || input_for_Player1 < 1 || input_for_Player1 > 2)
             {
+                if (input_for_Player1 < 1 || input_for_Player1 > 2)
+                {
+                    Console.WriteLine("Your Input is invalid. Please enter a value between 1 and 2:");
+                }
+                else 
+                {
+                    Console.WriteLine("Your Input is invalid. Please enter a number:");
+                }
+            }
+
                 Console.WriteLine("From what type is Player 2?");
                 Console.WriteLine(" [1] Human");
                 Console.WriteLine(" [2] Computer");
                 Console.WriteLine();
-                input_for_Player2 = Convert.ToInt32(Console.ReadLine());
 
-            } while (input_for_Player2 < 1 && input_for_Player2 > 2);
+                while (!Int32.TryParse(Console.ReadLine(), out input_for_Player2) || input_for_Player2 < 1 || input_for_Player2 > 2)
+                {
+                    if (input_for_Player2 < 1 || input_for_Player2 > 2)
+                    {
+                        Console.WriteLine("Your Input is invalid. Please enter a value between 1 and 2:");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your Input is invalid. Please enter a number:");
+                    }
+                }
 
             if (input_for_Player1 == 1)
             {
@@ -42,13 +61,21 @@ namespace Tictic
                 Console.WriteLine("  [1] Easy");
                 Console.WriteLine("  [2] Normal");
                 Console.WriteLine("  [3] Hard");
-                choose_difficulty = Convert.ToInt32(Console.ReadLine());
+
+                while (!Int32.TryParse(Console.ReadLine(), out choose_difficulty) || choose_difficulty < 1 || choose_difficulty > 3)
+                {
+                    if (choose_difficulty < 1 || choose_difficulty > 3)
+                    {
+                        Console.WriteLine("Your Input is invalid. Please enter a value between 1 and 3:");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your Input is invalid. Please enter a number:");
+                    }
+                }
+
                 Console.WriteLine();
                 player1 = new Computer(choose_difficulty);
-            }
-            else
-            {
-                Console.WriteLine("This value is not representing anything");
             }
 
             if (input_for_Player2 == 1)
@@ -62,18 +89,21 @@ namespace Tictic
                 Console.WriteLine("  [1] Easy");
                 Console.WriteLine("  [2] Normal");
                 Console.WriteLine("  [3] Hard");
-                choose_difficulty = Convert.ToInt32(Console.ReadLine());
+
+                while (!Int32.TryParse(Console.ReadLine(), out choose_difficulty) || choose_difficulty < 1 || choose_difficulty > 3)
+                {
+                    if (choose_difficulty < 1 || choose_difficulty > 3)
+                    {
+                        Console.WriteLine("Your Input is invalid. Please enter a value between 1 and 3:");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your Input is invalid. Please enter a number:");
+                    }
+                }
                 Console.WriteLine();
                 player2 = new Computer(choose_difficulty);
             }
-            else
-            {
-                Console.WriteLine("This value is not representing anything");
-            }
-
-            //player1.ImComputer ();
-            //player2.ImComputer ();
-
         }
 
         private void turn()
@@ -91,18 +121,20 @@ namespace Tictic
 
                 if (who_inserts == 1)
                 {
+                    Console.WriteLine("Player 1: ");
                     mark1 = 'X';
                     mark2 = 'O';
                     fieldtarget_of_player = player1.get_fieldtarget(field,mark2,mark1);
-                    Console.WriteLine("Player 1");
+
 
                 }
                 else
                 {
+                    Console.WriteLine("Player 2: ");
                     mark1 = 'O';
                     mark2 = 'X';
                     fieldtarget_of_player = player2.get_fieldtarget(field,mark2,mark1);
-                    Console.WriteLine("Player 2");
+
 
                 }
 
@@ -159,28 +191,70 @@ namespace Tictic
 
             } while (i == -1);
 
+            show_field();
+
             if (i == 1)
             {
                 if (who_inserts == 2)
                 {
                     Console.WriteLine("Player 1 won!");
+                    win_counter_player1 = win_counter_player1 + 1;
                 }
                 else
                 {
                     Console.WriteLine("Player 2 won!");
+                    win_counter_player2 = win_counter_player2 + 1;
                 }
             }
             else
             {
                 Console.WriteLine("Draw!");
+                win_counter_draw = win_counter_draw + 1;
             }
         }
 
         public void start()
         {
+            win_counter_player1 = 0;
+            win_counter_player2 = 0;
+            int continueoptions = 0;
             field = new Field();
             choose_Player();
             turn();
+            do
+            {
+                Console.WriteLine("How do you wish to continue?");
+                Console.WriteLine("[1] Next Round with same options");
+                Console.WriteLine("[2] Next Round with new options");
+                Console.WriteLine("[3] Exit");
+                continueoptions = Convert.ToInt32(Console.ReadLine());
+
+                field = new Field();
+
+                switch (continueoptions)
+                {
+                    case 2:
+                        choose_Player();
+                        turn();
+                        break;
+                    case 1:
+                        turn();
+                        break;
+                    case 3:
+                        break;
+                    default:
+                        Console.WriteLine("This is no option! Please try again:");
+                        break;
+                }
+
+                Console.WriteLine("Spielstand");
+                Console.WriteLine("----------");
+                Console.WriteLine("Player 1: " + win_counter_player1);
+                Console.WriteLine("Player 2: " + win_counter_player2);
+                Console.WriteLine("Draw: " + win_counter_draw);
+            } while (continueoptions != 3);
+            
+
             show_field();
         }
 
