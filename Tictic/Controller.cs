@@ -142,49 +142,8 @@ namespace Tictic
 
                 if (field.is_free(fieldtarget_of_player))
                 {
-                    field.set_fieldcontent(fieldtarget_of_player - 1, mark1);
+                    field.set_content(fieldtarget_of_player, mark1);
                 }
-
-                //if (fieldtarget_of_player == 1 && field.get_fieldcontent(0) == '1')
-                //{
-                //    field.set_fieldcontent(0, mark1);
-                //}
-                // //if (field.get_fieldcontent(fieldtarget_of_player - 1) != mark1 || field.get_fieldcontent(fieldtarget_of_player - 1) != mark2)
-                // //{
-                ////    field.set_fieldcontent(fieldtarget_of_player, mark1);
-                ////}
-                //else if (fieldtarget_of_player == 2 && field.get_fieldcontent(1) == '2')
-                //{
-                //    field.set_fieldcontent(1, mark1);
-                //}
-                //else if (fieldtarget_of_player == 3 && field.get_fieldcontent(2) == '3')
-                //{
-                //    field.set_fieldcontent(2, mark1);
-                //}
-                //else if (fieldtarget_of_player == 4 && field.get_fieldcontent(3) == '4')
-                //{
-                //    field.set_fieldcontent(3, mark1);
-                //}
-                //else if (fieldtarget_of_player == 5 && field.get_fieldcontent(4) == '5')
-                //{
-                //    field.set_fieldcontent(4, mark1);
-                //}
-                //else if (fieldtarget_of_player == 6 && field.get_fieldcontent(5) == '6')
-                //{
-                //    field.set_fieldcontent(5, mark1);
-                //}
-                //else if (fieldtarget_of_player == 7 && field.get_fieldcontent(6) == '7')
-                //{
-                //    field.set_fieldcontent(6, mark1);
-                //}
-                //else if (fieldtarget_of_player == 8 && field.get_fieldcontent(7) == '8')
-                //{
-                //    field.set_fieldcontent(7, mark1);
-                //}
-                //else if (fieldtarget_of_player == 9 && field.get_fieldcontent(8) == '9')
-                //{
-                //    field.set_fieldcontent(8, mark1);
-                //}
                 else
                 {
                     Console.WriteLine("Invalid move!");
@@ -194,7 +153,7 @@ namespace Tictic
                 who_inserts++;
                 i=check_if_won();
 
-            } while (i == -1); // bool
+            } while (i == -1);
 
             show_field();
 
@@ -216,6 +175,14 @@ namespace Tictic
                 Console.WriteLine("Draw!");
                 win_counter_draw = win_counter_draw + 1;
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Spielstand");
+            Console.WriteLine("----------");
+            Console.WriteLine("Player 1: " + win_counter_player1);
+            Console.WriteLine("Player 2: " + win_counter_player2);
+            Console.WriteLine("Draw: " + win_counter_draw);
+            Console.WriteLine();
         }
 
         public void start()
@@ -237,6 +204,12 @@ namespace Tictic
 
                 field = new Field();
 
+                Console.WriteLine("Spielstand");
+                Console.WriteLine("----------");
+                Console.WriteLine("Player 1: " + win_counter_player1);
+                Console.WriteLine("Player 2: " + win_counter_player2);
+                Console.WriteLine("Draw: " + win_counter_draw);
+
                 switch (continueoptions)
                 {
                     case 2:
@@ -253,12 +226,6 @@ namespace Tictic
                         break;
                 }
 
-                Console.WriteLine("Spielstand");
-                Console.WriteLine("----------");
-                Console.WriteLine("Player 1: " + win_counter_player1);
-                Console.WriteLine("Player 2: " + win_counter_player2);
-                Console.WriteLine("Draw: " + win_counter_draw);
-
             } while (continueoptions != 3);
             
         }
@@ -268,7 +235,7 @@ namespace Tictic
             Console.WriteLine();
             for (int iterationnumber = 0; iterationnumber < 9; iterationnumber += 3)
             {
-                Console.WriteLine(" " + field.get_fieldcontent(iterationnumber) + " | " + field.get_fieldcontent(iterationnumber + 1) + " | " + field.get_fieldcontent(iterationnumber + 2));
+                Console.WriteLine(" " + field.get_content(iterationnumber) + " | " + field.get_content(iterationnumber + 1) + " | " + field.get_content(iterationnumber + 2));
                 if (iterationnumber < 6)
                 {
                     Console.WriteLine("-----------");
@@ -278,34 +245,34 @@ namespace Tictic
         }
         public void give_information_about_field()
         {
-            field.get_fieldcontent(1);
+            field.get_content(1);
         }
 
         private int check_if_won()
         {
-	        if ((field.get_fieldcontent(0) == field.get_fieldcontent(1) && field.get_fieldcontent(1) == field.get_fieldcontent(2)) 
+	        if ((field.get_content(0) == field.get_content(1) && field.get_content(1) == field.get_content(2)) 
 
-		        || (field.get_fieldcontent(3) == field.get_fieldcontent(4) && field.get_fieldcontent(4) == field.get_fieldcontent(5)) 
+		        || (field.get_content(3) == field.get_content(4) && field.get_content(4) == field.get_content(5)) 
 
-		        || (field.get_fieldcontent(6) == field.get_fieldcontent(7) && field.get_fieldcontent(7) == field.get_fieldcontent(8))
+		        || (field.get_content(6) == field.get_content(7) && field.get_content(7) == field.get_content(8))
 
-		        || (field.get_fieldcontent(0) == field.get_fieldcontent(3) && field.get_fieldcontent(3) == field.get_fieldcontent(6))
+		        || (field.get_content(0) == field.get_content(3) && field.get_content(3) == field.get_content(6))
 
-		        || (field.get_fieldcontent(1) == field.get_fieldcontent(4) && field.get_fieldcontent(4) == field.get_fieldcontent(7))
+		        || (field.get_content(1) == field.get_content(4) && field.get_content(4) == field.get_content(7))
 
-		        || (field.get_fieldcontent(2) == field.get_fieldcontent(5) && field.get_fieldcontent(5) == field.get_fieldcontent(8))
+		        || (field.get_content(2) == field.get_content(5) && field.get_content(5) == field.get_content(8))
 
-		        || (field.get_fieldcontent(0) == field.get_fieldcontent(4) && field.get_fieldcontent(4) == field.get_fieldcontent(8))
+		        || (field.get_content(0) == field.get_content(4) && field.get_content(4) == field.get_content(8))
 
-		        || (field.get_fieldcontent(2) == field.get_fieldcontent(4) && field.get_fieldcontent(4) == field.get_fieldcontent(6)))
+		        || (field.get_content(2) == field.get_content(4) && field.get_content(4) == field.get_content(6)))
 	        {
 		        return 1;
 	        }
-	        else if ((field.get_fieldcontent(0) != '1') && (field.get_fieldcontent(1) != '2') && (field.get_fieldcontent(2) != '3') 
+	        else if ((field.get_content(0) != '1') && (field.get_content(1) != '2') && (field.get_content(2) != '3') 
 
-		        && (field.get_fieldcontent(3) != '4') && (field.get_fieldcontent(4) != '5') && (field.get_fieldcontent(5) != '6') 
+		        && (field.get_content(3) != '4') && (field.get_content(4) != '5') && (field.get_content(5) != '6') 
 
-                && (field.get_fieldcontent(6) != '7') && (field.get_fieldcontent(7) != '8') && (field.get_fieldcontent(8) != '9'))
+                && (field.get_content(6) != '7') && (field.get_content(7) != '8') && (field.get_content(8) != '9'))
 	        {
                 return 0;
             }

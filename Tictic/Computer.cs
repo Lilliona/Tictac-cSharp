@@ -54,7 +54,7 @@ namespace Tictic
             int help_for_random;
             int result_of_AI=0;
 
-	        if (field.get_fieldcontent(4)==mark1|| field.get_fieldcontent(4)==mark2)
+	        if (field.get_content(4)==mark1|| field.get_content(4)==mark2)
             {
 
 		        /***********************************************************
@@ -63,7 +63,7 @@ namespace Tictic
 
 		        ***********************************************************/
 
-                if (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9')
+                if (field.get_content(4) == mark1 && field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(3) == '4' && field.get_content(5) == '6' && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 4);
@@ -99,31 +99,31 @@ namespace Tictic
 
                 ********************************/
 
-                else if (field.get_fieldcontent(0) == '1' && ((field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(2) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(8) == mark2) || (field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(6) == mark2)))
+                else if (field.get_content(0) == '1' && ((field.get_content(1) == mark2 && field.get_content(2) == mark2) || (field.get_content(4) == mark2 && field.get_content(8) == mark2) || (field.get_content(3) == mark2 && field.get_content(6) == mark2)))
                 { result_of_AI = 1; }
 
-                else if (field.get_fieldcontent(2) == '3' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(1) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(6) == mark2) || (field.get_fieldcontent(5) == mark2 && field.get_fieldcontent(8) == mark2)))
+                else if (field.get_content(2) == '3' && ((field.get_content(0) == mark2 && field.get_content(1) == mark2) || (field.get_content(4) == mark2 && field.get_content(6) == mark2) || (field.get_content(5) == mark2 && field.get_content(8) == mark2)))
                 { result_of_AI = 3; }
 
-                else if (field.get_fieldcontent(6) == '7' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(3) == mark2) || (field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(4) == mark2) || (field.get_fieldcontent(7) == mark2 && field.get_fieldcontent(8) == mark2)))
+                else if (field.get_content(6) == '7' && ((field.get_content(0) == mark2 && field.get_content(3) == mark2) || (field.get_content(2) == mark2 && field.get_content(4) == mark2) || (field.get_content(7) == mark2 && field.get_content(8) == mark2)))
                 { result_of_AI = 7; }
 
-                else if (field.get_fieldcontent(8) == '9' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(4) == mark2) || (field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(5) == mark2) || (field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(7) == mark2)))
+                else if (field.get_content(8) == '9' && ((field.get_content(0) == mark2 && field.get_content(4) == mark2) || (field.get_content(2) == mark2 && field.get_content(5) == mark2) || (field.get_content(6) == mark2 && field.get_content(7) == mark2)))
                 { result_of_AI = 9; }
 
-                else if (field.get_fieldcontent(1) == '2' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(2) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(7) == mark2)))
+                else if (field.get_content(1) == '2' && ((field.get_content(0) == mark2 && field.get_content(2) == mark2) || (field.get_content(4) == mark2 && field.get_content(7) == mark2)))
                 { result_of_AI = 2; }
 
-                else if (field.get_fieldcontent(3) == '4' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(6) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(5) == mark2)))
+                else if (field.get_content(3) == '4' && ((field.get_content(0) == mark2 && field.get_content(6) == mark2) || (field.get_content(4) == mark2 && field.get_content(5) == mark2)))
                 { result_of_AI = 4; }
 
-                else if (field.get_fieldcontent(5) == '6' && ((field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(8) == mark2) || (field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(4) == mark2)))
+                else if (field.get_content(5) == '6' && ((field.get_content(2) == mark2 && field.get_content(8) == mark2) || (field.get_content(3) == mark2 && field.get_content(4) == mark2)))
                 { result_of_AI = 6; }
 
-                else if (field.get_fieldcontent(7) == '8' && ((field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(4) == mark2) || (field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(8) == mark2)))
+                else if (field.get_content(7) == '8' && ((field.get_content(1) == mark2 && field.get_content(4) == mark2) || (field.get_content(6) == mark2 && field.get_content(8) == mark2)))
                 { result_of_AI = 8; }
 
-                else if (field.get_fieldcontent(4) == '5' && ((field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(7) == mark2) || (field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(8) == mark2) || (field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(5) == mark2) || (field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(6) == mark2)))
+                else if (field.get_content(4) == '5' && ((field.get_content(1) == mark2 && field.get_content(7) == mark2) || (field.get_content(0) == mark2 && field.get_content(8) == mark2) || (field.get_content(3) == mark2 && field.get_content(5) == mark2) || (field.get_content(2) == mark2 && field.get_content(6) == mark2)))
                 { result_of_AI = 5; }
 
                 /********************************
@@ -132,31 +132,31 @@ namespace Tictic
 
                 ********************************/
 
-                else if (field.get_fieldcontent(0) == '1' && ((field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(8) == mark1) || (field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(6) == mark1)))
+                else if (field.get_content(0) == '1' && ((field.get_content(1) == mark1 && field.get_content(2) == mark1) || (field.get_content(4) == mark1 && field.get_content(8) == mark1) || (field.get_content(3) == mark1 && field.get_content(6) == mark1)))
                 { result_of_AI = 1; }
 
-                else if (field.get_fieldcontent(2) == '3' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(1) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(6) == mark1) || (field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(8) == mark1)))
+                else if (field.get_content(2) == '3' && ((field.get_content(0) == mark1 && field.get_content(1) == mark1) || (field.get_content(4) == mark1 && field.get_content(6) == mark1) || (field.get_content(5) == mark1 && field.get_content(8) == mark1)))
                 { result_of_AI = 3; }
 
-                else if (field.get_fieldcontent(6) == '7' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(3) == mark1) || (field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(4) == mark1) || (field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == mark1)))
+                else if (field.get_content(6) == '7' && ((field.get_content(0) == mark1 && field.get_content(3) == mark1) || (field.get_content(2) == mark1 && field.get_content(4) == mark1) || (field.get_content(7) == mark1 && field.get_content(8) == mark1)))
                 { result_of_AI = 7; }
 
-                else if (field.get_fieldcontent(8) == '9' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(4) == mark1) || (field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(5) == mark1) || (field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(7) == mark1)))
+                else if (field.get_content(8) == '9' && ((field.get_content(0) == mark1 && field.get_content(4) == mark1) || (field.get_content(2) == mark1 && field.get_content(5) == mark1) || (field.get_content(6) == mark1 && field.get_content(7) == mark1)))
                 { result_of_AI = 9; }
 
-                else if (field.get_fieldcontent(1) == '2' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(2) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(7) == mark1)))
+                else if (field.get_content(1) == '2' && ((field.get_content(0) == mark1 && field.get_content(2) == mark1) || (field.get_content(4) == mark1 && field.get_content(7) == mark1)))
                 { result_of_AI = 2; }
 
-                else if (field.get_fieldcontent(3) == '4' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(6) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == mark1)))
+                else if (field.get_content(3) == '4' && ((field.get_content(0) == mark1 && field.get_content(6) == mark1) || (field.get_content(4) == mark1 && field.get_content(5) == mark1)))
                 { result_of_AI = 4; }
 
-                else if (field.get_fieldcontent(5) == '6' && ((field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(8) == mark1) || (field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(4) == mark1)))
+                else if (field.get_content(5) == '6' && ((field.get_content(2) == mark1 && field.get_content(8) == mark1) || (field.get_content(3) == mark1 && field.get_content(4) == mark1)))
                 { result_of_AI = 6; }
 
-                else if (field.get_fieldcontent(7) == '8' && ((field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(4) == mark1) || (field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(8) == mark1)))
+                else if (field.get_content(7) == '8' && ((field.get_content(1) == mark1 && field.get_content(4) == mark1) || (field.get_content(6) == mark1 && field.get_content(8) == mark1)))
                 { result_of_AI = 8; }
 
-                else if (field.get_fieldcontent(4) == '5' && ((field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(7) == mark1) || (field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(8) == mark1) || (field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(5) == mark1) || (field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(6) == mark1)))
+                else if (field.get_content(4) == '5' && ((field.get_content(1) == mark1 && field.get_content(7) == mark1) || (field.get_content(0) == mark1 && field.get_content(8) == mark1) || (field.get_content(3) == mark1 && field.get_content(5) == mark1) || (field.get_content(2) == mark1 && field.get_content(6) == mark1)))
                 { result_of_AI = 5; }
 
                 /************************
@@ -171,19 +171,19 @@ namespace Tictic
 
                 ***/
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == mark2 && field.get_content(3) == mark2 && field.get_content(4) == mark1 && field.get_content(5) == mark1 && field.get_content(6) == mark1 && field.get_content(7) == '8' && field.get_content(8) == '9')
                 { result_of_AI = random.Next(0, 2) + 1; }
 
-                else if (field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == mark2)
+                else if (field.get_content(0) == mark1 && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(3) == mark2 && field.get_content(4) == mark1 && field.get_content(5) == mark1 && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == mark2)
                 { result_of_AI = random.Next(0, 2) + 7; }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == mark2 && field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == mark1 && field.get_content(3) == mark1 && field.get_content(4) == mark1 && field.get_content(5) == mark2 && field.get_content(6) == mark2 && field.get_content(7) == '8' && field.get_content(8) == '9')
                 { result_of_AI = random.Next(0, 2) + 8; }
 
-                else if (field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == mark2 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == mark1)
+                else if (field.get_content(0) == mark2 && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(3) == mark1 && field.get_content(4) == mark1 && field.get_content(5) == mark2 && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == mark1)
                 { result_of_AI = random.Next(0, 2) + 2; }
 
-                else if (field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark2 && field.get_fieldcontent(8) == mark1)
+                else if (field.get_content(0) == mark2 && field.get_content(1) == mark1 && field.get_content(2) == '3' && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == '7' && field.get_content(7) == mark2 && field.get_content(8) == mark1)
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -195,7 +195,7 @@ namespace Tictic
                         result_of_AI = 7;
                 }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(7) == mark2 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(1) == mark1 && field.get_content(2) == mark2 && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == mark1 && field.get_content(7) == mark2 && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -207,7 +207,7 @@ namespace Tictic
                         result_of_AI = 9;
                 }
 
-                else if (field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == mark2)
+                else if (field.get_content(0) == mark1 && field.get_content(1) == mark2 && field.get_content(2) == '3' && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == '7' && field.get_content(7) == mark1 && field.get_content(8) == mark2)
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -219,7 +219,7 @@ namespace Tictic
                         result_of_AI = 6;
                 }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(1) == mark2 && field.get_content(2) == mark1 && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == mark2 && field.get_content(7) == mark1 && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -237,7 +237,7 @@ namespace Tictic
 
                 ***/
 
-                else if ((field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9') || (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9'))
+                else if ((field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == mark2 && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == mark1 && field.get_content(7) == '8' && field.get_content(8) == '9') || (field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == mark1 && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == mark2 && field.get_content(7) == '8' && field.get_content(8) == '9'))
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -249,7 +249,7 @@ namespace Tictic
                         result_of_AI = 9;
                 }
 
-                else if ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == mark2) || (field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == mark1))
+                else if ((field.get_content(0) == mark1 && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == mark2) || (field.get_content(0) == mark2 && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == mark1))
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -267,16 +267,16 @@ namespace Tictic
 
                 ***/
 
-                else if ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == '9') || (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == mark1))
+                else if ((field.get_content(0) == mark1 && field.get_content(3) == '4' && field.get_content(6) == '7' && field.get_content(7) == mark1 && field.get_content(8) == '9') || (field.get_content(0) == '1' && field.get_content(3) == mark1 && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == mark1))
                 { result_of_AI = 7; }
 
-                else if ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(8) == '9') || (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(8) == mark1))
+                else if ((field.get_content(0) == mark1 && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(5) == mark1 && field.get_content(8) == '9') || (field.get_content(0) == '1' && field.get_content(1) == mark1 && field.get_content(2) == '3' && field.get_content(5) == '6' && field.get_content(8) == mark1))
                 { result_of_AI = 3; }
 
-                else if ((field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(6) == '7') || (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(6) == mark1))
+                else if ((field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == mark1 && field.get_content(3) == mark1 && field.get_content(6) == '7') || (field.get_content(0) == '1' && field.get_content(1) == mark1 && field.get_content(2) == '3' && field.get_content(3) == '4' && field.get_content(6) == mark1))
                 { result_of_AI = 1; }
 
-                else if ((field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == '9') || (field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9'))
+                else if ((field.get_content(2) == mark1 && field.get_content(5) == '6' && field.get_content(6) == '7' && field.get_content(7) == mark1 && field.get_content(8) == '9') || (field.get_content(2) == '3' && field.get_content(5) == mark1 && field.get_content(6) == mark1 && field.get_content(7) == '8' && field.get_content(8) == '9'))
                 { result_of_AI = 9; }
 
                 /***
@@ -285,7 +285,7 @@ namespace Tictic
 
                 ***/
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(3) == mark1 && field.get_content(6) == '7' && field.get_content(7) == mark1 && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 3);
@@ -301,7 +301,7 @@ namespace Tictic
                     else result_of_AI = 9;
                 }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(1) == mark1 && field.get_content(2) == '3' && field.get_content(5) == mark1 && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 3);
@@ -315,7 +315,7 @@ namespace Tictic
                     else result_of_AI = 9;
                 }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(6) == '7')
+                else if (field.get_content(0) == '1' && field.get_content(1) == mark1 && field.get_content(2) == '3' && field.get_content(3) == mark1 && field.get_content(6) == '7')
                 {
 
                     help_for_random = random.Next(0, 3);
@@ -330,7 +330,7 @@ namespace Tictic
                         result_of_AI = 7;
                 }
 
-                else if (field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(2) == '3' && field.get_content(5) == mark1 && field.get_content(6) == '7' && field.get_content(7) == mark1 && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 3);
@@ -351,7 +351,7 @@ namespace Tictic
 
                 ***/
 
-                else if (field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == mark1)
+                else if (field.get_content(0) == mark1 && field.get_content(3) == '4' && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == mark1)
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -363,7 +363,7 @@ namespace Tictic
                         result_of_AI = 8;
                 }
 
-                else if (field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(8) == mark1)
+                else if (field.get_content(0) == mark1 && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(5) == '6' && field.get_content(8) == mark1)
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -375,7 +375,7 @@ namespace Tictic
                         result_of_AI = 6;
                 }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(6) == mark1)
+                else if (field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == mark1 && field.get_content(3) == '4' && field.get_content(6) == mark1)
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -387,7 +387,7 @@ namespace Tictic
                         result_of_AI = 4;
                 }
 
-                else if (field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(2) == mark1 && field.get_content(5) == '6' && field.get_content(6) == mark1 && field.get_content(7) == '8' && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -411,16 +411,16 @@ namespace Tictic
 
                 ***/
 
-                else if ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark2 && field.get_fieldcontent(8) == '9') || (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == mark2))
+                else if ((field.get_content(0) == mark2 && field.get_content(3) == '4' && field.get_content(6) == '7' && field.get_content(7) == mark2 && field.get_content(8) == '9') || (field.get_content(0) == '1' && field.get_content(3) == mark2 && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == mark2))
                 { result_of_AI = 7; }
 
-                else if ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == mark2 && field.get_fieldcontent(8) == '9') || (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(8) == mark2))
+                else if ((field.get_content(0) == mark2 && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(5) == mark2 && field.get_content(8) == '9') || (field.get_content(0) == '1' && field.get_content(1) == mark2 && field.get_content(2) == '3' && field.get_content(5) == '6' && field.get_content(8) == mark2))
                 { result_of_AI = 3; }
 
-                else if ((field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(6) == '7') || (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(6) == mark2))
+                else if ((field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == mark2 && field.get_content(3) == mark2 && field.get_content(6) == '7') || (field.get_content(0) == '1' && field.get_content(1) == mark2 && field.get_content(2) == '3' && field.get_content(3) == '4' && field.get_content(6) == mark2))
                 { result_of_AI = 1; }
 
-                else if ((field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark2 && field.get_fieldcontent(8) == '9') || (field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == mark2 && field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9'))
+                else if ((field.get_content(2) == mark2 && field.get_content(5) == '6' && field.get_content(6) == '7' && field.get_content(7) == mark2 && field.get_content(8) == '9') || (field.get_content(2) == '3' && field.get_content(5) == mark2 && field.get_content(6) == mark2 && field.get_content(7) == '8' && field.get_content(8) == '9'))
                 { result_of_AI = 9; }
 
                 /***
@@ -429,16 +429,16 @@ namespace Tictic
 
                 ***/
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark2 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(3) == mark2 && field.get_content(6) == '7' && field.get_content(7) == mark2 && field.get_content(8) == '9')
                 { result_of_AI = 7; }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == mark2 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(1) == mark2 && field.get_content(2) == '3' && field.get_content(5) == mark2 && field.get_content(8) == '9')
                 { result_of_AI = 3; }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(6) == '7')
+                else if (field.get_content(0) == '1' && field.get_content(1) == mark2 && field.get_content(2) == '3' && field.get_content(3) == mark2 && field.get_content(6) == '7')
                 { result_of_AI = 1; }
 
-                else if (field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == mark2 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark2 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(2) == '3' && field.get_content(5) == mark2 && field.get_content(6) == '7' && field.get_content(7) == mark2 && field.get_content(8) == '9')
                 { result_of_AI = 9; }
 
                 /***
@@ -447,16 +447,16 @@ namespace Tictic
 
                 ***/
 
-                else if (field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == mark2)
+                else if (field.get_content(0) == mark2 && field.get_content(3) == '4' && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == mark2)
                 { result_of_AI = 7; }
 
-                else if (field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(8) == mark2)
+                else if (field.get_content(0) == mark2 && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(5) == '6' && field.get_content(8) == mark2)
                 { result_of_AI = 3; }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(6) == mark2)
+                else if (field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == mark2 && field.get_content(3) == '4' && field.get_content(6) == mark2)
                 { result_of_AI = 1; }
 
-                else if (field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(2) == mark2 && field.get_content(5) == '6' && field.get_content(6) == mark2 && field.get_content(7) == '8' && field.get_content(8) == '9')
                 { result_of_AI = 9; }
 
                 /****************
@@ -471,7 +471,7 @@ namespace Tictic
                     {
                         help_for_random = random.Next(1, 10);
 
-                    } while (field.get_fieldcontent(help_for_random - 1) == mark1 || field.get_fieldcontent(help_for_random - 1) == mark2);
+                    } while (field.get_content(help_for_random - 1) == mark1 || field.get_content(help_for_random - 1) == mark2);
 
                     result_of_AI = help_for_random;
                 }
@@ -502,7 +502,7 @@ namespace Tictic
             int help_for_random;
             int result_of_AI=0;
 
-	        if (field.get_fieldcontent(4)==mark1|| field.get_fieldcontent(4)==mark2)
+	        if (field.get_content(4)==mark1|| field.get_content(4)==mark2)
             {
 
 		        /***********************************************************
@@ -511,7 +511,7 @@ namespace Tictic
 
 		        ***********************************************************/
 
-                if (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9')
+                if (field.get_content(4) == mark1 && field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(3) == '4' && field.get_content(5) == '6' && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 4);
@@ -547,31 +547,31 @@ namespace Tictic
 
                 ********************************/
 
-                else if (field.get_fieldcontent(0) == '1' && ((field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(2) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(8) == mark2) || (field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(6) == mark2)))
+                else if (field.get_content(0) == '1' && ((field.get_content(1) == mark2 && field.get_content(2) == mark2) || (field.get_content(4) == mark2 && field.get_content(8) == mark2) || (field.get_content(3) == mark2 && field.get_content(6) == mark2)))
                 { result_of_AI = 1; }
 
-                else if (field.get_fieldcontent(2) == '3' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(1) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(6) == mark2) || (field.get_fieldcontent(5) == mark2 && field.get_fieldcontent(8) == mark2)))
+                else if (field.get_content(2) == '3' && ((field.get_content(0) == mark2 && field.get_content(1) == mark2) || (field.get_content(4) == mark2 && field.get_content(6) == mark2) || (field.get_content(5) == mark2 && field.get_content(8) == mark2)))
                 { result_of_AI = 3; }
 
-                else if (field.get_fieldcontent(6) == '7' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(3) == mark2) || (field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(4) == mark2) || (field.get_fieldcontent(7) == mark2 && field.get_fieldcontent(8) == mark2)))
+                else if (field.get_content(6) == '7' && ((field.get_content(0) == mark2 && field.get_content(3) == mark2) || (field.get_content(2) == mark2 && field.get_content(4) == mark2) || (field.get_content(7) == mark2 && field.get_content(8) == mark2)))
                 { result_of_AI = 7; }
 
-                else if (field.get_fieldcontent(8) == '9' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(4) == mark2) || (field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(5) == mark2) || (field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(7) == mark2)))
+                else if (field.get_content(8) == '9' && ((field.get_content(0) == mark2 && field.get_content(4) == mark2) || (field.get_content(2) == mark2 && field.get_content(5) == mark2) || (field.get_content(6) == mark2 && field.get_content(7) == mark2)))
                 { result_of_AI = 9; }
 
-                else if (field.get_fieldcontent(1) == '2' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(2) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(7) == mark2)))
+                else if (field.get_content(1) == '2' && ((field.get_content(0) == mark2 && field.get_content(2) == mark2) || (field.get_content(4) == mark2 && field.get_content(7) == mark2)))
                 { result_of_AI = 2; }
 
-                else if (field.get_fieldcontent(3) == '4' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(6) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(5) == mark2)))
+                else if (field.get_content(3) == '4' && ((field.get_content(0) == mark2 && field.get_content(6) == mark2) || (field.get_content(4) == mark2 && field.get_content(5) == mark2)))
                 { result_of_AI = 4; }
 
-                else if (field.get_fieldcontent(5) == '6' && ((field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(8) == mark2) || (field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(4) == mark2)))
+                else if (field.get_content(5) == '6' && ((field.get_content(2) == mark2 && field.get_content(8) == mark2) || (field.get_content(3) == mark2 && field.get_content(4) == mark2)))
                 { result_of_AI = 6; }
 
-                else if (field.get_fieldcontent(7) == '8' && ((field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(4) == mark2) || (field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(8) == mark2)))
+                else if (field.get_content(7) == '8' && ((field.get_content(1) == mark2 && field.get_content(4) == mark2) || (field.get_content(6) == mark2 && field.get_content(8) == mark2)))
                 { result_of_AI = 8; }
 
-                else if (field.get_fieldcontent(4) == '5' && ((field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(7) == mark2) || (field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(8) == mark2) || (field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(5) == mark2) || (field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(6) == mark2)))
+                else if (field.get_content(4) == '5' && ((field.get_content(1) == mark2 && field.get_content(7) == mark2) || (field.get_content(0) == mark2 && field.get_content(8) == mark2) || (field.get_content(3) == mark2 && field.get_content(5) == mark2) || (field.get_content(2) == mark2 && field.get_content(6) == mark2)))
                 { result_of_AI = 5; }
 
                 /********************************
@@ -580,31 +580,31 @@ namespace Tictic
 
                 *********************************/
 
-                else if (field.get_fieldcontent(0) == '1' && ((field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(8) == mark1) || (field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(6) == mark1)))
+                else if (field.get_content(0) == '1' && ((field.get_content(1) == mark1 && field.get_content(2) == mark1) || (field.get_content(4) == mark1 && field.get_content(8) == mark1) || (field.get_content(3) == mark1 && field.get_content(6) == mark1)))
                 { result_of_AI = 1; }
 
-                else if (field.get_fieldcontent(2) == '3' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(1) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(6) == mark1) || (field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(8) == mark1)))
+                else if (field.get_content(2) == '3' && ((field.get_content(0) == mark1 && field.get_content(1) == mark1) || (field.get_content(4) == mark1 && field.get_content(6) == mark1) || (field.get_content(5) == mark1 && field.get_content(8) == mark1)))
                 { result_of_AI = 3; }
 
-                else if (field.get_fieldcontent(6) == '7' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(3) == mark1) || (field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(4) == mark1) || (field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == mark1)))
+                else if (field.get_content(6) == '7' && ((field.get_content(0) == mark1 && field.get_content(3) == mark1) || (field.get_content(2) == mark1 && field.get_content(4) == mark1) || (field.get_content(7) == mark1 && field.get_content(8) == mark1)))
                 { result_of_AI = 7; }
 
-                else if (field.get_fieldcontent(8) == '9' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(4) == mark1) || (field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(5) == mark1) || (field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(7) == mark1)))
+                else if (field.get_content(8) == '9' && ((field.get_content(0) == mark1 && field.get_content(4) == mark1) || (field.get_content(2) == mark1 && field.get_content(5) == mark1) || (field.get_content(6) == mark1 && field.get_content(7) == mark1)))
                 { result_of_AI = 9; }
 
-                else if (field.get_fieldcontent(1) == '2' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(2) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(7) == mark1)))
+                else if (field.get_content(1) == '2' && ((field.get_content(0) == mark1 && field.get_content(2) == mark1) || (field.get_content(4) == mark1 && field.get_content(7) == mark1)))
                 { result_of_AI = 2; }
 
-                else if (field.get_fieldcontent(3) == '4' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(6) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == mark1)))
+                else if (field.get_content(3) == '4' && ((field.get_content(0) == mark1 && field.get_content(6) == mark1) || (field.get_content(4) == mark1 && field.get_content(5) == mark1)))
                 { result_of_AI = 4; }
 
-                else if (field.get_fieldcontent(5) == '6' && ((field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(8) == mark1) || (field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(4) == mark1)))
+                else if (field.get_content(5) == '6' && ((field.get_content(2) == mark1 && field.get_content(8) == mark1) || (field.get_content(3) == mark1 && field.get_content(4) == mark1)))
                 { result_of_AI = 6; }
 
-                else if (field.get_fieldcontent(7) == '8' && ((field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(4) == mark1) || (field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(8) == mark1)))
+                else if (field.get_content(7) == '8' && ((field.get_content(1) == mark1 && field.get_content(4) == mark1) || (field.get_content(6) == mark1 && field.get_content(8) == mark1)))
                 { result_of_AI = 8; }
 
-                else if (field.get_fieldcontent(4) == '5' && ((field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(7) == mark1) || (field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(8) == mark1) || (field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(5) == mark1) || (field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(6) == mark1)))
+                else if (field.get_content(4) == '5' && ((field.get_content(1) == mark1 && field.get_content(7) == mark1) || (field.get_content(0) == mark1 && field.get_content(8) == mark1) || (field.get_content(3) == mark1 && field.get_content(5) == mark1) || (field.get_content(2) == mark1 && field.get_content(6) == mark1)))
                 { result_of_AI = 5; }
 
                 /************************
@@ -619,19 +619,19 @@ namespace Tictic
 
                 ***/
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == mark2 && field.get_content(3) == mark2 && field.get_content(4) == mark1 && field.get_content(5) == mark1 && field.get_content(6) == mark1 && field.get_content(7) == '8' && field.get_content(8) == '9')
                 { result_of_AI = random.Next(0, 2) + 1; }
 
-                else if (field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == mark2)
+                else if (field.get_content(0) == mark1 && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(3) == mark2 && field.get_content(4) == mark1 && field.get_content(5) == mark1 && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == mark2)
                 { result_of_AI = random.Next(0, 2) + 7; }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == mark2 && field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(1) == '2' && field.get_content(2) == mark1 && field.get_content(3) == mark1 && field.get_content(4) == mark1 && field.get_content(5) == mark2 && field.get_content(6) == mark2 && field.get_content(7) == '8' && field.get_content(8) == '9')
                 { result_of_AI = random.Next(0, 2) + 8; }
 
-                else if (field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(1) == '2' && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == mark2 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == '8' && field.get_fieldcontent(8) == mark1)
+                else if (field.get_content(0) == mark2 && field.get_content(1) == '2' && field.get_content(2) == '3' && field.get_content(3) == mark1 && field.get_content(4) == mark1 && field.get_content(5) == mark2 && field.get_content(6) == '7' && field.get_content(7) == '8' && field.get_content(8) == mark1)
                 { result_of_AI = random.Next(0, 2) + 2; }
 
-                else if (field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark2 && field.get_fieldcontent(8) == mark1)
+                else if (field.get_content(0) == mark2 && field.get_content(1) == mark1 && field.get_content(2) == '3' && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == '7' && field.get_content(7) == mark2 && field.get_content(8) == mark1)
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -643,7 +643,7 @@ namespace Tictic
                         result_of_AI = 7;
                 }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(7) == mark2 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(1) == mark1 && field.get_content(2) == mark2 && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == mark1 && field.get_content(7) == mark2 && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -655,7 +655,7 @@ namespace Tictic
                         result_of_AI = 9;
                 }
 
-                else if (field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == mark2)
+                else if (field.get_content(0) == mark1 && field.get_content(1) == mark2 && field.get_content(2) == '3' && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == '7' && field.get_content(7) == mark1 && field.get_content(8) == mark2)
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -667,7 +667,7 @@ namespace Tictic
                         result_of_AI = 6;
                 }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(3) == '4' && field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == '6' && field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(1) == mark2 && field.get_content(2) == mark1 && field.get_content(3) == '4' && field.get_content(4) == mark1 && field.get_content(5) == '6' && field.get_content(6) == mark2 && field.get_content(7) == mark1 && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 2);
@@ -685,7 +685,7 @@ namespace Tictic
 
                 ***/
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(3) == mark1 && field.get_content(6) == '7' && field.get_content(7) == mark1 && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 3);
@@ -701,7 +701,7 @@ namespace Tictic
                     else result_of_AI = 9;
                 }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(0) == '1' && field.get_content(1) == mark1 && field.get_content(2) == '3' && field.get_content(5) == mark1 && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 3);
@@ -715,7 +715,7 @@ namespace Tictic
                     else result_of_AI = 9;
                 }
 
-                else if (field.get_fieldcontent(0) == '1' && field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == '3' && field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(6) == '7')
+                else if (field.get_content(0) == '1' && field.get_content(1) == mark1 && field.get_content(2) == '3' && field.get_content(3) == mark1 && field.get_content(6) == '7')
                 {
 
                     help_for_random = random.Next(0, 3);
@@ -730,7 +730,7 @@ namespace Tictic
                         result_of_AI = 7;
                 }
 
-                else if (field.get_fieldcontent(2) == '3' && field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(6) == '7' && field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == '9')
+                else if (field.get_content(2) == '3' && field.get_content(5) == mark1 && field.get_content(6) == '7' && field.get_content(7) == mark1 && field.get_content(8) == '9')
                 {
 
                     help_for_random = random.Next(0, 3);
@@ -757,7 +757,7 @@ namespace Tictic
                     {
                         help_for_random = random.Next(1, 10);
 
-                    } while (field.get_fieldcontent(help_for_random - 1) == mark1 || field.get_fieldcontent(help_for_random - 1) == mark2);
+                    } while (field.get_content(help_for_random - 1) == mark1 || field.get_content(help_for_random - 1) == mark2);
 
                     result_of_AI = help_for_random;
                 }
@@ -790,31 +790,31 @@ namespace Tictic
 
             ********************************/
 
-            if (field.get_fieldcontent(0) == '1' && ((field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(2) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(8) == mark2) || (field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(6) == mark2)))
+            if (field.get_content(0) == '1' && ((field.get_content(1) == mark2 && field.get_content(2) == mark2) || (field.get_content(4) == mark2 && field.get_content(8) == mark2) || (field.get_content(3) == mark2 && field.get_content(6) == mark2)))
             { result_of_AI = 1; }
 
-            else if (field.get_fieldcontent(2) == '3' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(1) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(6) == mark2) || (field.get_fieldcontent(5) == mark2 && field.get_fieldcontent(8) == mark2)))
+            else if (field.get_content(2) == '3' && ((field.get_content(0) == mark2 && field.get_content(1) == mark2) || (field.get_content(4) == mark2 && field.get_content(6) == mark2) || (field.get_content(5) == mark2 && field.get_content(8) == mark2)))
             { result_of_AI = 3; }
 
-            else if (field.get_fieldcontent(6) == '7' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(3) == mark2) || (field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(4) == mark2) || (field.get_fieldcontent(7) == mark2 && field.get_fieldcontent(8) == mark2)))
+            else if (field.get_content(6) == '7' && ((field.get_content(0) == mark2 && field.get_content(3) == mark2) || (field.get_content(2) == mark2 && field.get_content(4) == mark2) || (field.get_content(7) == mark2 && field.get_content(8) == mark2)))
             { result_of_AI = 7; }
 
-            else if (field.get_fieldcontent(8) == '9' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(4) == mark2) || (field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(5) == mark2) || (field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(7) == mark2)))
+            else if (field.get_content(8) == '9' && ((field.get_content(0) == mark2 && field.get_content(4) == mark2) || (field.get_content(2) == mark2 && field.get_content(5) == mark2) || (field.get_content(6) == mark2 && field.get_content(7) == mark2)))
             { result_of_AI = 9; }
 
-            else if (field.get_fieldcontent(1) == '2' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(2) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(7) == mark2)))
+            else if (field.get_content(1) == '2' && ((field.get_content(0) == mark2 && field.get_content(2) == mark2) || (field.get_content(4) == mark2 && field.get_content(7) == mark2)))
             { result_of_AI = 2; }
 
-            else if (field.get_fieldcontent(3) == '4' && ((field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(6) == mark2) || (field.get_fieldcontent(4) == mark2 && field.get_fieldcontent(5) == mark2)))
+            else if (field.get_content(3) == '4' && ((field.get_content(0) == mark2 && field.get_content(6) == mark2) || (field.get_content(4) == mark2 && field.get_content(5) == mark2)))
             { result_of_AI = 4; }
 
-            else if (field.get_fieldcontent(5) == '6' && ((field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(8) == mark2) || (field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(4) == mark2)))
+            else if (field.get_content(5) == '6' && ((field.get_content(2) == mark2 && field.get_content(8) == mark2) || (field.get_content(3) == mark2 && field.get_content(4) == mark2)))
             { result_of_AI = 6; }
 
-            else if (field.get_fieldcontent(7) == '8' && ((field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(4) == mark2) || (field.get_fieldcontent(6) == mark2 && field.get_fieldcontent(8) == mark2)))
+            else if (field.get_content(7) == '8' && ((field.get_content(1) == mark2 && field.get_content(4) == mark2) || (field.get_content(6) == mark2 && field.get_content(8) == mark2)))
             { result_of_AI = 8; }
 
-            else if (field.get_fieldcontent(4) == '5' && ((field.get_fieldcontent(1) == mark2 && field.get_fieldcontent(7) == mark2) || (field.get_fieldcontent(0) == mark2 && field.get_fieldcontent(8) == mark2) || (field.get_fieldcontent(3) == mark2 && field.get_fieldcontent(5) == mark2) || (field.get_fieldcontent(2) == mark2 && field.get_fieldcontent(6) == mark2)))
+            else if (field.get_content(4) == '5' && ((field.get_content(1) == mark2 && field.get_content(7) == mark2) || (field.get_content(0) == mark2 && field.get_content(8) == mark2) || (field.get_content(3) == mark2 && field.get_content(5) == mark2) || (field.get_content(2) == mark2 && field.get_content(6) == mark2)))
             { result_of_AI = 5; }
 
             /********************************
@@ -823,31 +823,31 @@ namespace Tictic
 
             *********************************/
 
-            else if (field.get_fieldcontent(0) == '1' && ((field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(2) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(8) == mark1) || (field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(6) == mark1)))
+            else if (field.get_content(0) == '1' && ((field.get_content(1) == mark1 && field.get_content(2) == mark1) || (field.get_content(4) == mark1 && field.get_content(8) == mark1) || (field.get_content(3) == mark1 && field.get_content(6) == mark1)))
             { result_of_AI = 1; }
 
-            else if (field.get_fieldcontent(2) == '3' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(1) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(6) == mark1) || (field.get_fieldcontent(5) == mark1 && field.get_fieldcontent(8) == mark1)))
+            else if (field.get_content(2) == '3' && ((field.get_content(0) == mark1 && field.get_content(1) == mark1) || (field.get_content(4) == mark1 && field.get_content(6) == mark1) || (field.get_content(5) == mark1 && field.get_content(8) == mark1)))
             { result_of_AI = 3; }
 
-            else if (field.get_fieldcontent(6) == '7' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(3) == mark1) || (field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(4) == mark1) || (field.get_fieldcontent(7) == mark1 && field.get_fieldcontent(8) == mark1)))
+            else if (field.get_content(6) == '7' && ((field.get_content(0) == mark1 && field.get_content(3) == mark1) || (field.get_content(2) == mark1 && field.get_content(4) == mark1) || (field.get_content(7) == mark1 && field.get_content(8) == mark1)))
             { result_of_AI = 7; }
 
-            else if (field.get_fieldcontent(8) == '9' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(4) == mark1) || (field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(5) == mark1) || (field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(7) == mark1)))
+            else if (field.get_content(8) == '9' && ((field.get_content(0) == mark1 && field.get_content(4) == mark1) || (field.get_content(2) == mark1 && field.get_content(5) == mark1) || (field.get_content(6) == mark1 && field.get_content(7) == mark1)))
             { result_of_AI = 9; }
 
-            else if (field.get_fieldcontent(1) == '2' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(2) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(7) == mark1)))
+            else if (field.get_content(1) == '2' && ((field.get_content(0) == mark1 && field.get_content(2) == mark1) || (field.get_content(4) == mark1 && field.get_content(7) == mark1)))
             { result_of_AI = 2; }
 
-            else if (field.get_fieldcontent(3) == '4' && ((field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(6) == mark1) || (field.get_fieldcontent(4) == mark1 && field.get_fieldcontent(5) == mark1)))
+            else if (field.get_content(3) == '4' && ((field.get_content(0) == mark1 && field.get_content(6) == mark1) || (field.get_content(4) == mark1 && field.get_content(5) == mark1)))
             { result_of_AI = 4; }
 
-            else if (field.get_fieldcontent(5) == '6' && ((field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(8) == mark1) || (field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(4) == mark1)))
+            else if (field.get_content(5) == '6' && ((field.get_content(2) == mark1 && field.get_content(8) == mark1) || (field.get_content(3) == mark1 && field.get_content(4) == mark1)))
             { result_of_AI = 6; }
 
-            else if (field.get_fieldcontent(7) == '8' && ((field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(4) == mark1) || (field.get_fieldcontent(6) == mark1 && field.get_fieldcontent(8) == mark1)))
+            else if (field.get_content(7) == '8' && ((field.get_content(1) == mark1 && field.get_content(4) == mark1) || (field.get_content(6) == mark1 && field.get_content(8) == mark1)))
             { result_of_AI = 8; }
 
-            else if (field.get_fieldcontent(4) == '5' && ((field.get_fieldcontent(1) == mark1 && field.get_fieldcontent(7) == mark1) || (field.get_fieldcontent(0) == mark1 && field.get_fieldcontent(8) == mark1) || (field.get_fieldcontent(3) == mark1 && field.get_fieldcontent(5) == mark1) || (field.get_fieldcontent(2) == mark1 && field.get_fieldcontent(6) == mark1)))
+            else if (field.get_content(4) == '5' && ((field.get_content(1) == mark1 && field.get_content(7) == mark1) || (field.get_content(0) == mark1 && field.get_content(8) == mark1) || (field.get_content(3) == mark1 && field.get_content(5) == mark1) || (field.get_content(2) == mark1 && field.get_content(6) == mark1)))
             { result_of_AI = 5; }
 
             /****************
@@ -862,7 +862,7 @@ namespace Tictic
                 {
                     help_for_random = random.Next(1, 10);
 
-                } while (field.get_fieldcontent(help_for_random - 1) == mark1 || field.get_fieldcontent(help_for_random - 1) == mark2);
+                } while (field.get_content(help_for_random - 1) == mark1 || field.get_content(help_for_random - 1) == mark2);
 
                 result_of_AI = help_for_random;
             }
