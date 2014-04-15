@@ -14,8 +14,8 @@ namespace Tictic
 
         private void choose_Player()
         {
-            int input_for_Player1;
-            int input_for_Player2;
+            int input_for_Player1=0;
+            int input_for_Player2=0;
 
             Console.WriteLine("From what type is Player 1?");
             Console.WriteLine(" [1] Human");
@@ -108,10 +108,10 @@ namespace Tictic
 
         private void turn()
         {
-            char mark1,mark2;//bekommt den Wert X oder O je nach Spieler
-            int who_inserts = 1;//Wechsel zwischen Spielern durch %2
-            int fieldtarget_of_player = 0;//überbringt das gewählte Feld vom aktuellen Spieler
-            int i = -1; //sagt durch bestimmen von Gewinner/Draw ob das Spiel weiter geht
+            char mark1,mark2;               //bekommt den Wert X oder O je nach Spieler
+            int who_inserts = 1;            //Wechsel zwischen Spielern durch %2
+            int fieldtarget_of_player = 0;  //überbringt das gewählte Feld vom aktuellen Spieler
+            int i = -1;                     //sagt durch bestimmen von Gewinner/Draw ob das Spiel weiter geht
 
             do
             {
@@ -125,8 +125,6 @@ namespace Tictic
                     mark1 = 'X';
                     mark2 = 'O';
                     fieldtarget_of_player = player1.get_fieldtarget(field,mark2,mark1);
-
-
                 }
                 else
                 {
@@ -134,8 +132,6 @@ namespace Tictic
                     mark1 = 'O';
                     mark2 = 'X';
                     fieldtarget_of_player = player2.get_fieldtarget(field,mark2,mark1);
-
-
                 }
 
                 /*******************************
@@ -144,42 +140,51 @@ namespace Tictic
 
                 *******************************/
 
-                if (fieldtarget_of_player == 1 && field.get_fieldcontent(0) == '1')
+                if (field.is_free(fieldtarget_of_player))
                 {
-                    field.set_fieldcontent(0, mark1);
+                    field.set_fieldcontent(fieldtarget_of_player - 1, mark1);
                 }
-                else if (fieldtarget_of_player == 2 && field.get_fieldcontent(1) == '2')
-                {
-                    field.set_fieldcontent(1, mark1);
-                }
-                else if (fieldtarget_of_player == 3 && field.get_fieldcontent(2) == '3')
-                {
-                    field.set_fieldcontent(2, mark1);
-                }
-                else if (fieldtarget_of_player == 4 && field.get_fieldcontent(3) == '4')
-                {
-                    field.set_fieldcontent(3, mark1);
-                }
-                else if (fieldtarget_of_player == 5 && field.get_fieldcontent(4) == '5')
-                {
-                    field.set_fieldcontent(4, mark1);
-                }
-                else if (fieldtarget_of_player == 6 && field.get_fieldcontent(5) == '6')
-                {
-                    field.set_fieldcontent(5, mark1);
-                }
-                else if (fieldtarget_of_player == 7 && field.get_fieldcontent(6) == '7')
-                {
-                    field.set_fieldcontent(6, mark1);
-                }
-                else if (fieldtarget_of_player == 8 && field.get_fieldcontent(7) == '8')
-                {
-                    field.set_fieldcontent(7, mark1);
-                }
-                else if (fieldtarget_of_player == 9 && field.get_fieldcontent(8) == '9')
-                {
-                    field.set_fieldcontent(8, mark1);
-                }
+
+                //if (fieldtarget_of_player == 1 && field.get_fieldcontent(0) == '1')
+                //{
+                //    field.set_fieldcontent(0, mark1);
+                //}
+                // //if (field.get_fieldcontent(fieldtarget_of_player - 1) != mark1 || field.get_fieldcontent(fieldtarget_of_player - 1) != mark2)
+                // //{
+                ////    field.set_fieldcontent(fieldtarget_of_player, mark1);
+                ////}
+                //else if (fieldtarget_of_player == 2 && field.get_fieldcontent(1) == '2')
+                //{
+                //    field.set_fieldcontent(1, mark1);
+                //}
+                //else if (fieldtarget_of_player == 3 && field.get_fieldcontent(2) == '3')
+                //{
+                //    field.set_fieldcontent(2, mark1);
+                //}
+                //else if (fieldtarget_of_player == 4 && field.get_fieldcontent(3) == '4')
+                //{
+                //    field.set_fieldcontent(3, mark1);
+                //}
+                //else if (fieldtarget_of_player == 5 && field.get_fieldcontent(4) == '5')
+                //{
+                //    field.set_fieldcontent(4, mark1);
+                //}
+                //else if (fieldtarget_of_player == 6 && field.get_fieldcontent(5) == '6')
+                //{
+                //    field.set_fieldcontent(5, mark1);
+                //}
+                //else if (fieldtarget_of_player == 7 && field.get_fieldcontent(6) == '7')
+                //{
+                //    field.set_fieldcontent(6, mark1);
+                //}
+                //else if (fieldtarget_of_player == 8 && field.get_fieldcontent(7) == '8')
+                //{
+                //    field.set_fieldcontent(7, mark1);
+                //}
+                //else if (fieldtarget_of_player == 9 && field.get_fieldcontent(8) == '9')
+                //{
+                //    field.set_fieldcontent(8, mark1);
+                //}
                 else
                 {
                     Console.WriteLine("Invalid move!");
@@ -189,7 +194,7 @@ namespace Tictic
                 who_inserts++;
                 i=check_if_won();
 
-            } while (i == -1);
+            } while (i == -1); // bool
 
             show_field();
 
@@ -221,6 +226,7 @@ namespace Tictic
             field = new Field();
             choose_Player();
             turn();
+
             do
             {
                 Console.WriteLine("How do you wish to continue?");
@@ -252,10 +258,9 @@ namespace Tictic
                 Console.WriteLine("Player 1: " + win_counter_player1);
                 Console.WriteLine("Player 2: " + win_counter_player2);
                 Console.WriteLine("Draw: " + win_counter_draw);
+
             } while (continueoptions != 3);
             
-
-            show_field();
         }
 
         private void show_field()

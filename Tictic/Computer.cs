@@ -9,6 +9,7 @@ namespace Tictic
     {
 
         private int choice_for_intelligence;
+
         public Computer()
         {
             this.choice_for_intelligence = 3;
