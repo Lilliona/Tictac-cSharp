@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-/*TODO: check fieldcontentvalues*/
-
 namespace Tictic
 {
     public class Field
@@ -25,14 +23,7 @@ namespace Tictic
         {
             char fieldcontent = this.field[fieldnumber-1];
 
-            if (fieldcontent == 'X' || fieldcontent == 'O')
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return !(fieldcontent == 'X' || fieldcontent == 'O');
         }
     }
 }

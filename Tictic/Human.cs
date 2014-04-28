@@ -7,7 +7,7 @@ namespace Tictic
 {
     public class Human: Player
     {
-        public override int get_fieldtarget(Field field,char mark1,char mark2)
+        public override int get_fieldtarget(Field field,char opponent,char actual_player)
         {
             int ask_for_fieldtarget;
 

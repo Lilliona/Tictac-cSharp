@@ -212,11 +212,11 @@ namespace Tictic
 
                 switch (continueoptions)
                 {
-                    case 2:
-                        choose_Player();
+                    case 1:
                         turn();
                         break;
-                    case 1:
+                    case 2:
+                        choose_Player();
                         turn();
                         break;
                     case 3:
@@ -242,10 +242,6 @@ namespace Tictic
                 }
             }
             Console.WriteLine();
-        }
-        public void give_information_about_field()
-        {
-            field.get_content(1);
         }
 
         private int check_if_won()
